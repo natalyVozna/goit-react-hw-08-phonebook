@@ -1,33 +1,9 @@
 import styled from 'styled-components';
 import { ReactComponent as Plus } from '../../images/plus.svg';
 
-export const Container = styled.section`
-  display: flex;
-  min-width: 400px;
-  width: 400px;
-  height: 700px;
-  margin: 0 auto;
-`;
-export const BorderBox = styled.div`
-  border: 16px solid var(--white);
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(
-    60deg,
-    rgba(84, 58, 183, 1) 0%,
-    rgb(0, 172, 193) 100%
-  );
-  width: 100%;
-  height: 100%;
-  /* min-width: 400px;
-  height: 800px; */
-  position: relative;
-  overflow: hidden;
-`;
 export const Content = styled.div`
   position: relative;
-  padding: 20px 0;
+  padding: 20px;
   border-radius: 38px 38px 0 0;
   bottom: 0;
   left: 0;
@@ -38,6 +14,7 @@ export const Content = styled.div`
   height: 100%;
   overflow: hidden;
   box-shadow: 0px 0px 9px 0px rgb(33 33 33 / 55%);
+  /* background-size: cover; */
 `;
 
 export const ContactsBox = styled.div`

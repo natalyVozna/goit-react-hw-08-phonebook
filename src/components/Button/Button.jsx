@@ -6,10 +6,16 @@ export const Button = ({
   disabled = false,
   icon: Icon = null,
   children,
+  styled,
   onClickHandle,
 }) => {
   return (
-    <StyledButton type={type} disabled={disabled} onClick={onClickHandle}>
+    <StyledButton
+      type={type}
+      disabled={disabled}
+      style={styled}
+      onClick={onClickHandle}
+    >
       {Icon && <Icon size="20" />}
       {children}
     </StyledButton>

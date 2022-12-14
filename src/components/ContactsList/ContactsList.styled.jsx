@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactList = styled.ul`
+export const ContactListStyled = styled.ul`
   display: flex;
   justify-content: center;
   flex-direction: column;

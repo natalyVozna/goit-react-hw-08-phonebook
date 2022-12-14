@@ -11,7 +11,11 @@ export const Item = styled.li`
   line-height: 1.3;
 `;
 export const Cover = styled.div`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-transform: uppercase;
   width: 50px;
   min-width: 50px;
   height: 50px;

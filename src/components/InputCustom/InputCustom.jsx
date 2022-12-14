@@ -12,18 +12,19 @@ export const InputCustom = ({
   title,
   name,
   value,
+  icon: Icon,
   fildStyle,
   inputStyle,
   required = true,
   pattern,
   handleChangeInput,
   placeholder,
-  disabled = true,
+  disabled = false,
 }) => {
   return (
     <Field style={fildStyle}>
       {title && <LabelInput htmlFor={inputId}>{title}</LabelInput>}
-      <SearchLabel disabled={disabled} />
+      {Icon && <SearchLabel disabled={disabled} />}
       <InputStyled
         type={type}
         name={name}
@@ -51,5 +52,5 @@ InputCustom.propTypes = {
   fildStyle: PropTypes.shape({}),
   title: PropTypes.string,
   inputStyle: PropTypes.shape({}),
-  handleChangeInput: PropTypes.func.isRequired,
+  handleChangeInput: PropTypes.func,
 };
