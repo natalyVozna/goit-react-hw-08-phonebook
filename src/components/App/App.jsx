@@ -52,7 +52,7 @@ export const App = () => {
   return (
     // <div>App</div>
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/login" element={<Layout />}>
         {/* <Route index element={<HomePage />} /> */}
         {/* <Route path="contacts" element={<ContactsPage />} />
         <Route path="login" element={<LoginPage />} />
