@@ -20,6 +20,7 @@ export const Content = styled.div`
 export const ContactsBox = styled.div`
   height: 100%;
   overflow-y: auto;
+  padding-top: 20px;
 `;
 export const Title = styled.h1`
   display: flex;

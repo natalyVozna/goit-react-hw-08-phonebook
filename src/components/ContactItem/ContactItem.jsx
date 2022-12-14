@@ -8,6 +8,7 @@ import {
   InfoBox,
   Text,
 } from './ContactItem.styled';
+import { ReactComponent as CloseIcon } from '../../images/close-icon.svg';
 
 export const ContactItem = ({ name, number, onClickDelete, id }) => {
   function getRandomHexColor() {
@@ -30,7 +31,7 @@ export const ContactItem = ({ name, number, onClickDelete, id }) => {
         <Text>{number}</Text>
       </InfoBox>
       <DeleteButton type="button" onClick={() => onClickDelete(id)}>
-        delete
+        <CloseIcon />
       </DeleteButton>
     </Item>
   );
@@ -40,6 +41,5 @@ ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  color: PropTypes.string,
   onClickDelete: PropTypes.func.isRequired,
 };

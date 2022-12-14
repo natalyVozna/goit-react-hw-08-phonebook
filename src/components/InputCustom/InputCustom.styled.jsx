@@ -3,6 +3,7 @@ import { ReactComponent as SearchIcon } from '../../images/search-left.svg';
 
 export const Field = styled.div`
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;

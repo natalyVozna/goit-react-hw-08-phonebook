@@ -1,19 +1,15 @@
 import { Button } from 'components/Button/Button';
 import { InputCustom } from 'components/InputCustom/InputCustom';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { logIn } from 'redux/auth/operation';
-import { Form } from './LoginForm.styled';
+import { FormStyle, LinkSignup, Text } from './LoginForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
-    console.log('eve', e);
     e.preventDefault();
-    // const form = e.currentTarget;
     const form = e.target;
-    console.log('login', form.elements.email?.value);
     dispatch(
       logIn({
         email: form.elements.email?.value,
@@ -24,7 +20,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
+    <FormStyle onSubmit={handleSubmit}>
       <InputCustom
         title="Email"
         name="email"
@@ -41,10 +37,9 @@ export const LoginForm = () => {
       <Button type="submit" styled={{ marginTop: '30px' }}>
         Log In
       </Button>
-    </Form>
+
+      <Text>Don't have an account?</Text>
+      <LinkSignup to="/register">Sign up</LinkSignup>
+    </FormStyle>
   );
 };
-
-// LoginForm.propTypes = {
-//   onSubmitHandle: PropTypes.func.isRequired,
-// };

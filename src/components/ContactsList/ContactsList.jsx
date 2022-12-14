@@ -5,12 +5,11 @@ import { ContactItem } from 'components/ContactItem/ContactItem';
 export const ContactsList = ({ contacts, onClickDelete }) => {
   return (
     <ContactListStyled>
-      {contacts.map(({ name, number, id, color }) => (
+      {contacts.map(({ name, number, id }) => (
         <ContactItem
           key={id}
           name={name}
           number={number}
-          color={color}
           id={id}
           onClickDelete={() => onClickDelete(id)}
         />
@@ -27,4 +26,5 @@ ContactsList.propTypes = {
       id: PropTypes.string.isRequired,
     })
   ),
+  onClickDelete: PropTypes.func,
 };

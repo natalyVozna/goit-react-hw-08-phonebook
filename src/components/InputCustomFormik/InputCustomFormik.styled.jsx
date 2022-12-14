@@ -1,15 +1,10 @@
 import styled from 'styled-components';
+import { ReactComponent as SearchIcon } from '../../images/search-left.svg';
+import { Field } from 'formik';
 
-export const Form = styled.form`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* padding: 0 20px; */
-  margin-bottom: 30px;
-`;
-
-export const Field = styled.div`
+export const FieldStyle = styled(Field)`
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -21,6 +16,19 @@ export const LabelInput = styled.label`
   font-size: 16px;
   line-height: 1.4;
   color: var(--text);
+`;
+
+export const ErrorText = styled.p`
+  color: var(--red);
+`;
+export const SearchLabel = styled(SearchIcon)`
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 22px;
+  height: 24px;
+
+  fill: ${p => (p.disabled ? '#afb1b8' : '#2c2c2c')};
 `;
 
 export const InputStyled = styled.input`

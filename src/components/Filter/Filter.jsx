@@ -20,8 +20,8 @@ export const Filter = ({ value, onChange, disabled }) => {
         placeholder="Search contacts"
         disabled={disabled}
         icon={Search}
+        required={false}
         inputStyle={{ paddingLeft: '36px', backgroundColor: '#f1f2f7' }}
-        // title="Filter by name"
         handleChangeInput={onChange}
       />
     </Container>

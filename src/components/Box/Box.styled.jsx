@@ -13,7 +13,6 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
   box-shadow: 0px 0px 9px 0px rgb(33 33 33 / 55%);
-  /* background-size: cover; */
 `;
 
 export const Content = styled.div`

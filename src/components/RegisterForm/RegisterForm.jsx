@@ -2,7 +2,7 @@ import { Button } from 'components/Button/Button';
 import { InputCustom } from 'components/InputCustom/InputCustom';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operation';
-import { Form } from './RegisterForm.styled';
+import { Form, LinkSignup, Text } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -47,6 +47,8 @@ export const RegisterForm = () => {
       <Button type="submit" styled={{ marginTop: '30px' }}>
         Register
       </Button>
+      <Text>Already have an account? </Text>
+      <LinkSignup to="/login">Login here</LinkSignup>
     </Form>
   );
 };

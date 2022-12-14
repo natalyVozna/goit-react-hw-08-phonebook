@@ -15,7 +15,7 @@ export const Box = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0px 0px 9px 0px rgb(33 33 33 / 55%);
+  /* box-shadow: 0px 0px 9px 0px rgb(33 33 33 / 55%); */
 `;
 
 export const Text = styled.p`

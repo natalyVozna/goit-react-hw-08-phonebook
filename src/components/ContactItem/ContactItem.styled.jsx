@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Item = styled.li`
-  padding: 0 20px;
   display: flex;
   align-items: center;
   margin-bottom: 24px;
@@ -9,6 +8,7 @@ export const Item = styled.li`
   font-weight: 500;
   font-size: 24px;
   line-height: 1.3;
+  padding-right: 4px;
 `;
 export const Cover = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ export const Cover = styled.div`
 `;
 export const InfoBox = styled.div`
   display: flex;
-  width: 100%;
+  width: calc(100% - 115px);
   flex-direction: column;
 `;
 
@@ -46,8 +46,9 @@ export const Text = styled(Info)`
 
 export const DeleteButton = styled.button`
   display: flex;
-  padding: 3px 6px;
+  padding: 0;
   align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 13px;
   margin-left: 16px;
@@ -55,9 +56,21 @@ export const DeleteButton = styled.button`
   line-height: 1;
   color: var(--red);
   transition: transform 250ms var(--timing-function);
+  width: 32px;
+  height: 32px;
 
   :active,
   :hover {
     transform: scale(1.1);
+
+    svg {
+      fill: var(--red);
+    }
+  }
+
+  svg {
+    min-width: 30px;
+    width: 30px;
+    fill: var(--gray);
   }
 `;

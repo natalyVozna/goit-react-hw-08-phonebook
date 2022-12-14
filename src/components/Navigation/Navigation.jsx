@@ -1,5 +1,4 @@
 import { LinkStyled, NavBar } from './Navigation.styled';
-import { NavLink } from 'react-router-dom';
 
 import React from 'react';
 import { useAuth } from 'hooks';
