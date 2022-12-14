@@ -1,4 +1,4 @@
-import { useAuth } from 'hooks';
+// import { useAuth } from 'hooks';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -13,7 +13,7 @@ const RegisterPage = lazy(() => import('pages/Register/Register'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  // const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());

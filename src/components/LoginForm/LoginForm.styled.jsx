@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Form } from 'formik';
 
 export const FormStyle = styled.form`
   width: 100%;
