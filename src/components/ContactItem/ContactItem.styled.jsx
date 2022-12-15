@@ -16,6 +16,7 @@ export const Cover = styled.div`
   justify-content: center;
   font-size: 22px;
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px var(--title);
   width: 50px;
   min-width: 50px;
   height: 50px;

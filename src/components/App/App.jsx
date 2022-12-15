@@ -1,5 +1,4 @@
-// import { useAuth } from 'hooks';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Layout from 'components/Layout/Layout';
@@ -10,9 +9,11 @@ import { PrivateRoute } from 'http.js/PrivateRoute';
 const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
 const LoginPage = lazy(() => import('pages/Login/Login'));
 const RegisterPage = lazy(() => import('pages/Register/Register'));
+const HomePage = lazy(() => import('pages/Home/Home'));
 
 export const App = () => {
   const dispatch = useDispatch();
+  // const navigate = useNav
   // const { isRefreshing } = useAuth();
 
   useEffect(() => {
@@ -53,11 +54,7 @@ export const App = () => {
     // <div>App</div>
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* <Route index element={<HomePage />} /> */}
-        {/* <Route path="contacts" element={<ContactsPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="register" element={<RegisterPage />} /> */}
-        {/* <Route index element={<LoginPage />} /> */}
+        <Route index element={<HomePage />} />
 
         <Route
           path="/register"
@@ -76,11 +73,10 @@ export const App = () => {
         />
         <Route
           path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
-          }
+          element={<PrivateRoute redirectTo="/" component={<ContactsPage />} />}
         />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

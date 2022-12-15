@@ -18,6 +18,19 @@ export const LineStyle = styled.div`
   bottom: -10px;
   z-index: 1;
 `;
+export const Title = styled.h1`
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: var(--title);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+`;
 export const LinkStyled = styled(Link)`
   display: inline-flex;
   align-items: center;

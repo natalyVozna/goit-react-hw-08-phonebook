@@ -56,10 +56,8 @@ export const Minus = styled.span`
 
 export const AddButton = styled.button`
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0;
-  /* bottom: 26px; */
-  /* left: 50%; */
   transform: translateX(-50%);
   border: none;
   background-color: var(--white);

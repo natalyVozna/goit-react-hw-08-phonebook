@@ -1,4 +1,4 @@
-import { Container, Box, BorderBox } from './Layout.styled';
+import { Container, Box, BorderBox, Title, Content } from './Layout.styled';
 import { Outlet } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import Header from '../Header/Header';
@@ -9,9 +9,12 @@ const Layout = () => {
       <Box>
         <BorderBox>
           <Header />
-          <Suspense fallback={null}>
-            <Outlet />
-          </Suspense>
+          <Title>Phonebook</Title>
+          <Content>
+            <Suspense fallback={null}>
+              <Outlet />
+            </Suspense>
+          </Content>
         </BorderBox>
       </Box>
     </Container>

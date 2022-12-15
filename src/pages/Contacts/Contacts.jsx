@@ -36,6 +36,7 @@ const Contacts = () => {
     );
     if (!isName) {
       dispatch(addContact(data));
+      Notify.success('You have added a contact');
     } else {
       Notify.warning('You already have this contact');
     }
