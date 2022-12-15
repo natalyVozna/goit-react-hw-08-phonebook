@@ -13,8 +13,6 @@ const HomePage = lazy(() => import('pages/Home/Home'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  // const navigate = useNav
-  // const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());

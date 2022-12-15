@@ -46,6 +46,7 @@ export const logIn = createAsyncThunk(
       // After successful login, add the token to the HTTP header
       setAuthHeader(res.data.token);
       Notify.success(`Welcome back, ${res.data?.user?.name}`);
+
       return res.data;
     } catch (error) {
       Notify.failure('An error occurred, please try again');
@@ -63,6 +64,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     await axios.post('/users/logout');
     // After a successful logout, remove the token from the HTTP header
     clearAuthHeader();
+    Notify.success(`You have successfully logout`);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }

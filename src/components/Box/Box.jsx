@@ -1,4 +1,4 @@
-import { Content, SubTitle, Title } from './Box.styled';
+import { Content, SubTitle } from './Box.styled';
 export const Box = ({ children, title, styled }) => {
   return (
     <Content style={styled}>
